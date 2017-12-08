@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<nav class="navbar navbar-default_blue navbar-fixed-top">
+  <div class="container-fluid">
+    <p class="navbar-header pull-left">
+      <a class="navbar-brand thick">
+        <b class="jj-font">
+          Profile
+        </b>
+      </a>
+    </p>
+
+    <p class="navbar-text pull-right">
+      <button (click)="goToProfile(username, email, firstName, lastName, phone, DOB)" type="submit" class="navbar-link jj-button">
+        <span class="jj-button-text glyphicon glyphicon-ok"></span>
+      </button>
+    </p>
+  </div>
+</nav>
+
+
+<div class="container-fluid jj-body jj-font">
+  <form>
+    <div class="form-group">
+      <label for="username">
+        Username
+      </label>
+      <input [(ngModel)]="username"
+             name="username"
+             id="username"
+             type="text"
+             placeholder="Username"
+             class="form-control"/>
+
+      <label for="email">
+        Email
+      </label>
+      <input [(ngModel)]="email"
+             name="email"
+             id="email"
+             type="email"
+             placeholder="Email"
+             class="form-control"
+             email/>
+
+      <label for="First Name">
+        First Name
+      </label>
+      <input [(ngModel)]="firstName"
+             name="First Name"
+             id="First Name"
+             type="text"
+             placeholder="First Name"
+             class="form-control"/>
+
+      <label for="Last Name">
+        Last Name
+      </label>
+      <input [(ngModel)]="lastName"
+             name="Last Name"
+             id="Last Name"
+             type="text"
+             placeholder="Last Name"
+             class="form-control"/>
+      <label for="phone">
+        Phone Number
+      </label>
+      <input [(ngModel)]="phone"
+             name="phone"
+             id="phone"
+             type="tel"
+             placeholder="xxx-xxx-xxxx"
+             class="form-control"/>
+      <label for="DOB">
+        Birthday
+      </label>
+      <input [(ngModel)]="DOB"
+             name="DOB"
+             id="DOB"
+             type="date"
+             class="form-control"/>
+    </div>
+
+    <!--<form ngNoForm action="{{baseURL}}/api/upload" method="post" enctype="multipart/form-data"-->
+    <!--class="jj-form container-fluid">-->
+    <!--<input name="myFile" type="file" class="form-control"/>-->
+    <!--<input name="userId" value="{{userId}}" style="display: none"/>-->
+    <!--<button (click)="commit(picture)"-->
+    <!--type="submit" class="btn btn-block btn-primary jj-button-hover" aria-pressed="true">Save Changes-->
+    <!--</button>-->
+    <!--<br/>-->
+    <!--</form>-->
+  </form>
+  <button class="btn btn-danger btn-block jj-button-hover"
+          aria-pressed="true"
+          (click)="deleteAccount(userId)">
+    Delete Account
+  </button>
+
+</div>
+
+<nav class="navbar navbar-default_blue navbar-fixed-bottom">
+  <div class="container-fluid">
+    <p class="navbar-text pull-right">
+      <button class="jj-button" (click)="cancelChanges()">
+        <span class="glyphicon glyphicon-user"></span>
+      </button>
+    </p>
+  </div>
+</nav>
