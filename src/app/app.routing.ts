@@ -31,7 +31,7 @@ import {AlbumListComponent} from './components/album/album-list/album-list.compo
 
 
 const APP_ROUTES: Routes = [
-  {path: '', component : HomeComponent},
+  {path: '', component : FrontPageComponent},
   {path: 'test', component: TestComponent},
   {path: 'login', component: FrontPageComponent},
   {path: 'nasa-pic', component: NasaPictureTestComponent},

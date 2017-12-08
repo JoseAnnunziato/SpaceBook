@@ -56,6 +56,7 @@ export class UserService {
     const url = this.baseURL + '/api/user?username=' + username + '&password=' + password;
     return this.http.get(url)
       .map((response: Response) => {
+        console.log(response.json().toString());
         return response.json();
       });
   }
